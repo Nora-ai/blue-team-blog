@@ -3,7 +3,7 @@ const db = require('../db/connection')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
-const getBlog = async (req, res) => {
+const getBlogs = async (req, res) => {
     try {
         const blogs = await Blog.find()
         res.json(blogs)
@@ -64,7 +64,7 @@ const deleteBlog = async (req, res) => {
 
 module.exports = {
     createBlog,
-    getBlog,
+    getBlogs,
     getBlog,
     updateBlog,
     deleteBlog
