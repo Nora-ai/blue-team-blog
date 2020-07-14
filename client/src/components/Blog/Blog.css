@@ -1,0 +1,46 @@
+.blog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    box-shadow: 0px 0px 3px 1px #CECECE;
+    transition: 250ms all;
+    padding: 20px;
+    margin-bottom: 60px;
+}
+
+.blog:hover {
+    transform: scale(1.02);
+    opacity: .9;
+}
+
+.blog-image {
+    width: 300px;
+}
+
+.blog-title {
+    font-size: 24px;
+    padding: 10px;
+}
+
+.blog-post {
+    font-size: 14px;
+    padding: 10px;
+}
+
+.blog-author {
+    font-size: 18px;
+    padding: 10px;
+}
+
+@media (max-width: 500px) {
+    .product {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .product-image {
+        width: 180px;
+        margin: 15px;
+        padding: 10px;
+    }
+}
