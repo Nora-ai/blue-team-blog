@@ -65,7 +65,7 @@ class Blog extends Component {
 
   render() {
     const blogsJSX = this.state.queriedBlogs.map((blog, index) =>
-      <Blog _id={blog.title} name={blog.imgURL} imgURL={blog.post} price={blog.author} key={index} />
+      <Blog _id={blog._id} title={blog.title} imgURL={blog.imgURL} post={blog.post} author={blog.author} key={index} />
     )
 
     return (
