@@ -3,12 +3,12 @@ import './Blogs.css'
 
 import Blog from '../../components/Blog/Blog'
 import Search from '../../components/Search/Search'
-//import { AZ, ZA, lowestFirst, highestFirst } from "../../utils/sort"
+import { AZ, ZA } from "../../utils/sort"
 import Sort from '../../components/Sort/Sort'
-import Layout from '../../components/shared/Layout/Layout'
+import Layout from '../../components/Shared/Layout/Layout'
 import { getBlogs } from '../../services/blogs'
 
-class Blog extends Component {
+class Blogs extends Component {
   constructor() {
     super()
     this.state = {
@@ -28,7 +28,7 @@ class Blog extends Component {
 
   handleSearch = event => {
     const sort = () => this.handleSort(this.state.sortType)
-    const queriedBlogs = this.state.allBlogs.filter(blog => blog.name.toLowerCase().includes(event.target.value.toLowerCase()))
+    const queriedBlogs = this.state.allBlogs.filter(blog => blog.title.toLowerCase().includes(event.target.value.toLowerCase()))
     this.setState({ queriedBlogs }, sort)
   }
 
@@ -36,26 +36,26 @@ class Blog extends Component {
     this.setState({ sortType: type })
     const { queriedBlogs } = this.state
     switch (type) {
-      case "name-ascending":
+      case "title-ascending":
         this.setState({
           queriedBlogs: AZ(queriedBlogs)
         });
         break
-      case "name-descending":
+      case "title-descending":
         this.setState({
           queriedBlogs: ZA(queriedBlogs)
         });
         break
-      case "price-ascending":
-        this.setState({
-          queriedBlogs: lowestFirst(queriedBlogs)
-        });
-        break
-      case "price-descending":
-        this.setState({
-          queriedBlogs: highestFirst(queriedBlogs)
-        });
-        break
+      // case "price-ascending":
+      //   this.setState({
+      //     queriedBlogs: lowestFirst(queriedBlogs)
+      //   });
+      //   break
+      // case "price-descending":
+      //   this.setState({
+      //     queriedBlogs: highestFirst(queriedBlogs)
+      //   });
+        // break
       default:
         break
     }

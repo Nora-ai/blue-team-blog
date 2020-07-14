@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './BlogEdit.css'
 import { Redirect } from 'react-router-dom'
-import Layout from '../../components/shared/Layout/Layout'
+import Layout from '../../components/Shared/Layout/Layout'
 import { getBlog, updateBlog } from '../../services/blogs'
 
 class BlogEdit extends Component {

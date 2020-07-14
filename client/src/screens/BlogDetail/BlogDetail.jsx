@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './BlogDetail.css'
-import Layout from '../../components/shared/Layout/Layout'
+import Layout from '../../components/Shared/Layout/Layout'
 import { getBlog, deleteBlog } from '../../services/blogs'
 import { Link } from 'react-router-dom'
 

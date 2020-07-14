@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './BlogCreate.css'
-import Layout from '../../components/shared/Layout/Layout'
+import Layout from '../../components/Shared/Layout/Layout'
 import { Redirect } from 'react-router-dom'
 import { createBlog } from '../../services/blogs'
 

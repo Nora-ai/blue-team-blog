@@ -1,18 +1,23 @@
-const compareKey = key =>
-  (a, b) => {
-    if (a[key] < b[key]) {
-      return -1
-    }
-    if (a[key] > b[key]) {
-      return 1
-    }
-    return 0
-  }
+import React from 'react'
+import './Sort.css'
 
-// one liner
-// const compareKey = key => (a, b) => a[key] == b[key]? (a[key] < b[key] ? -1 : 1) : 0
+const Sort = (props) => {
 
-export const AZ = arr => arr.sort(compareKey('name'))
-export const ZA = arr => arr.sort(compareKey('name')).reverse()
-export const lowestFirst = arr => arr.sort((a, b) => parseInt(a.price) - parseInt(b.price))
-export const highestFirst = arr => arr.sort((a, b) => parseInt(b.price) - parseInt(a.price))
+    const handleChange = (event) => {
+        props.onChange(event.target.value)
+    }
+
+    return (
+        <form className="sort-container" onSubmit={props.handleSubmit}>
+            <label htmlFor="sort">SORT BY:</label>
+            <select className="sort" onChange={handleChange}>
+                <option className="option" value="name-ascending" >&nbsp; Alphabetically, A-Z &nbsp;</option>
+                <option value="name-descending">&nbsp; Alphabetically, Z-A &nbsp;</option>
+                <option value="price-ascending">&nbsp; Price, low to high &nbsp;</option>
+                <option value="price-descending">&nbsp; Price, high to low &nbsp;</option>
+            </select>
+        </form>
+    )
+}
+
+export default Sort
