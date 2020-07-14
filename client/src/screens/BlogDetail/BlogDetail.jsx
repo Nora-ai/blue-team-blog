@@ -27,7 +27,7 @@ class BlogDetail extends Component {
         return (
             <Layout>
                 <div className="blog-detail">
-                    <img className="blog-detail-image" src={product.imgURL} alt={product.name} />
+                    <img className="blog-detail-image" src={blog.imgURL} alt={blog.name} />
                     <div className="detail">
                         <div className="title">{blog.title}</div>
                         <div className="author">{`By ${blog.author}`}</div>

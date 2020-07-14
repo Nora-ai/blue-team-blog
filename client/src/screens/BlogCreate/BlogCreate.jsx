@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './BlogCreate.css'
 import Layout from '../../components/shared/Layout/Layout'
 import { Redirect } from 'react-router-dom'
-import { createProduct } from '../../services/products'
+import { createBlog } from '../../services/blogs'
 
 class BlogCreate extends Component {
     constructor() {
@@ -30,7 +30,7 @@ class BlogCreate extends Component {
 
     handleSubmit = async (event) => {
         event.preventDefault()
-        const created = await createProduct(this.state.blog)
+        const created = await createBlog(this.state.blog)
         this.setState({ created })
     }
 
@@ -55,7 +55,7 @@ class BlogCreate extends Component {
                     <input
                         className="input-author"
                         placeholder='Author'
-                        value={product.price}
+                        value={blog.author}
                         name='author'
                         required
                         onChange={this.handleChange}
