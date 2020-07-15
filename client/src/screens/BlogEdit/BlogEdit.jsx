@@ -29,7 +29,7 @@ class BlogEdit extends Component {
         const { name, value } = event.target
         this.setState({
             blog: {
-                ...this.state.product,
+                ...this.state.blog,
                 [name]: value
             }
         })
