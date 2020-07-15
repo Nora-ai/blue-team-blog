@@ -22,7 +22,7 @@ const main = async () => {
         "title": "Astronomical Astrolopetifcus Patrenarsis",
         "imgURL": "https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
         "post": "It's been six hours. Dreams move one... one-hundredth the speed of reality, and dog time is one-seventh human time. So y'know, every day here is like a minute. It's like Inception, Morty, so if it's confusing and stupid, then so is everyone's favorite movie. Hey listen, you know, if we're all bored over here, wouldn't the common denominator be you? I love morty and i hope morty loves me. I want to wrap my arms around him and feel him deep inside me. Nothing you do matters, your existence is a lie!",
-        "Author": "Tommy Miller"
+        "author": "Tommy Miller"
       }
 
       ]

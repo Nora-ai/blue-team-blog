@@ -6,7 +6,7 @@ const Blog = new Schema(
     title: { type: String, required: true },
     imgURL: { type: String, required: true },
     post: { type: String, required: true },
-    author: { type: String, required: false }
+    author: { type: String, required: true }
   },
   { timestamps: true }
 )
